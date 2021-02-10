@@ -4,50 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Quiz</title>
+    <title>David Lynch Quiz</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <section id="controls">
     <section id="info">
-      <button id="scores" href="">View High Scores</button>
-      <section id="timer"><p>Time: <span id="time">0</span></p></section>
+      <button id="scores">View High Scores</button>
+      <section id="timer"><p>Time: <span id="time">90</span></p></section>
     </section>
 </section>
     
   
-  <section id="positionWrapper">
+<body>
     <section id="intro">
-      <h1>Coding Quiz Challenge</h1>
-      <p>Try to answer the following code-related questions within the time limit.
-        Keep in mind that incorrect answers will penalize your score/time by ten seconds.
-      </p>
-      <button>Start Quiz</button>
+      <h1>David Lynch Challenge</h1>
+      <p> Try to answer the following David Lynch-themed questions within the time limit. Keep in mind, of course, that incorrect answers will lower your score by 10 seconds.</p>
+      <button id="start">Start Quiz</button>
   
     </section>
   
     <section id="quiz-holder">
-      <p id="title"></p>
+      <p id="question"></p>
+        <section>
           <button id="ans1"></button>
           <button id="ans2"></button>
           <button id="ans3"></button>
           <button id="ans4"></button>
+        </section>
       <section id="scoreIndicator">
         <p></p>
       </section>
     </section>
   
-    <section id="finish" class="hide">
+    <section id="finish">
       <h1>All Done</h1>
       <p>Your final score was <span id="score"></span></p>
       <section id="records">
         <p>Enter initials: </p><input id="initials" type="text"> <button>Submit</button>
       </section>
-    <section id="highScores" class="hide">
+    <section id="highScores">
       <h1>High Scores</h1>
       <section>
   
       </section>
       <button id="reset">Go Back</button> <button id="wipeScores">Wipe Scores</button>
     </section>
-</section>
+    <script src="assets/script.js"></script>
+  </body>
 </html>
