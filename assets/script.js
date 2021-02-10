@@ -9,3 +9,4 @@ function countdown() {
         console.log("Game Over");
         clearInterval(timer);
     }
+};
