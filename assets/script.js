@@ -16,16 +16,18 @@ function tickTock() {
         if (timeLimit <= 0) {
             console.log("Game Over");
             clearInterval(timer);
+            return;
         }
     }, 1000);
 };
 
+var index = 0;
 
 var qS = {
     // using the property "questions" to build out my questions for the quiz, which have taken a decidedly Lynchian turn
     questions: [
         {
-            q: "What film of David Lynch's won the Palme d' Or at the Cannes Film Festival?",
+            q: "What film of David Lynch's won the Palme d'Or at the Cannes Film Festival?",
             inputs: ['Blue Velvet', 'Wild at Heart', 'Inland Empire', 'Twin Peaks: Fire Walk With Me'],
             answer: 1
         },
@@ -49,16 +51,18 @@ var qS = {
             inputs: ['Indiana Jones', 'Jaws', 'Nightmare on Elm Street', 'Star Wars'],
             answer: 3
         }
-    ],
+],
 }
 
+console.log(qS.questions.inputs);
+
 function questionApply() {
-    if (0 <= (qS.questions.length - 1)) {
-        questions.innerHTML = 1 + ". " + questions[0].q;
-        ans1.innerHTML = qS.questions[qS].inputs[0];
-        ans2.innerHTML = qS.questions[qS].inputs[1];
-        ans3.innerHTML = qS.questions[qS].inputs[2];
-        ans4.innerHTML = qS.questions[qS].inputs[3];
+    if (index <= (qS.questions.length - 1)) {
+        question.innerHTML = qS.questions[0].q;
+        ans1.innerHTML = qS.questions[0].inputs[0];
+        ans2.innerHTML = qS.questions[0].inputs[1];
+        ans3.innerHTML = qS.questions[0].inputs[2];
+        ans4.innerHTML = qS.questions[0].inputs[3];
     } else {
         alert("Quiz Completed!")
     }
