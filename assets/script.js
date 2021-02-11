@@ -37,8 +37,8 @@ var qS = {
             answer: 2
         },
         {
-            q: "",
-            inputs: ['Part 16', 'Part 5', 'Part 7', 'Part 10'],
+            q: "What episode does David Lynch depict the origin of BOB in The Return?",
+            inputs: ['Part 8', 'Part 5', 'Part 7', 'Part 10'],
             answer: 0
         },
         {
@@ -55,7 +55,7 @@ var qS = {
 }
 
 console.log(qS.questions.inputs);
-
+//  a function i attempted to get to display the questions/answers in their respective spots; didn't know how to get it to cycle
 function questionApply() {
     if (index <= (qS.questions.length - 1)) {
         question.innerHTML = qS.questions[0].q;
